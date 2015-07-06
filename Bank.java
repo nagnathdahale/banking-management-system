@@ -14,7 +14,7 @@ name[count]=d;
 System.out.println("Account No is: "+count+1);
 count++;
 }
-boolean deposit(float amt1,int accno)
+boolean deposit(float amt1,int accno)                   //Functionaity of deposit section
 {
 for(int i=0;i<count;i++)
 {
@@ -27,7 +27,7 @@ return true;
 }
 return false;
 }
-boolean withdraw(int accno,float amt1)
+boolean withdraw(int accno,float amt1)                  //functionality of withdrawn management
 {
 for(int i=0;i<count;i++)
 {
@@ -39,7 +39,7 @@ return true;
 }
 return false;
 }
-float search(int accno)
+float search(int accno)                                 // Searching Functionality
 {
 for(int i=0;i<count;i++)
 {
