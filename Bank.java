@@ -1,13 +1,13 @@
 import java.io.*;
 class Bank
 {
-int[][] det=new int[100][4];
+int[][] det=new int[100][4];                          // Initializing 2D array
 float[] bal=new float[100];
 String[] name=new String[100];
 int count=0;
 void intialize(int t,float b,String d)
 {
-det[count][0]=count+1;
+det[count][0]=count+1;                                //entering values into counter                                                                    
 det[count][1]=t;
 bal[count]=b;
 name[count]=d;
@@ -63,10 +63,12 @@ return true;
 }
 return false;
 }
+
+
 public static void main(String[] args) throws Exception
 {
 Bank obj=new Bank();
-BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));    //Input Reader Stream to read efficient input charectors
 System.out.print("Enter the Operation to be Performed\n1.New Account\n2.Deposit Money\n3.Withdraw Money\n4.Search\n5.Exit\n");
 int choice;
 choice=Integer.parseInt(br.readLine());
@@ -74,6 +76,10 @@ do
 {
 switch(choice)
 {
+
+                // Account Management Section
+
+
 case 1:
 System.out.println("Enter Name: ");
 String str=br.readLine();
@@ -90,6 +96,8 @@ System.out.println("Enter Starting Deposit: ");
 float amt=Float.parseFloat(br.readLine());
 obj.intialize(type,amt,str);
 break;
+
+                        //Deposit Management
 case 2:
 System.out.println("Enter Account No ");
 int accno=Integer.parseInt(br.readLine());
@@ -101,6 +109,9 @@ System.out.println("Deposit Successful");
 else
 System.out.println("Invalid Details");
 break;
+
+                                            //Withdrawl management 
+
 case 3:
 System.out.println("Enter Account No ");
 int accn=Integer.parseInt(br.readLine());
@@ -118,6 +129,8 @@ System.out.println("Invalid Details");
 else
 System.out.println("Invalid Amount");
 break;
+
+                                        //Searching Module
 case 4:
 System.out.println("Enter Account No ");
 accn=Integer.parseInt(br.readLine());
