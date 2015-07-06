@@ -1,6 +1,8 @@
 import java.io.*;
+import java.util.Date;
 class Bank
 {
+        Static Date date=date Date();
 int[][] det=new int[100][4];                          // Initializing 2D array
 float[] bal=new float[100];
 String[] name=new String[100];
@@ -105,7 +107,7 @@ System.out.println("Enter Amount");
 float am1=Float.parseFloat(br.readLine());
 boolean state=obj.deposit(am1,accno);
 if(state==true)
-System.out.println("Deposit Successful");
+System.out.println("Deposit Successful \n1.Time" +date);
 else
 System.out.println("Invalid Details");
 break;
@@ -122,7 +124,7 @@ if(amt2<=obj.search(accn))
 {
 state=obj.withdraw(accn,amt2);
 if(state==true)
-System.out.println("WithDrawl Successful");
+System.out.println("WithDrawl Successful \n1.Time" +date);
 else
 System.out.println("Invalid Details");
 }
